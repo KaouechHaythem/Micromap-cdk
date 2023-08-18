@@ -1,0 +1,93 @@
+{
+  "ami:account=981864830773:filters.image-type.0=machine:filters.name.0=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20211129:filters.state.0=available:region=us-east-1": "ami-012ef95ef66694070",
+  "vpc-provider:account=981864830773:filter.vpc-id=vpc-03a1e4ecd0e1b9a56:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-03a1e4ecd0e1b9a56",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "981864830773",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-041d5b80782bd1051",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          },
+          {
+            "subnetId": "subnet-0a24d569aa97e1ade",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          },
+          {
+            "subnetId": "subnet-048c01c86ad3dc653",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          },
+          {
+            "subnetId": "subnet-099e93d2c4c6ba1f7",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          },
+          {
+            "subnetId": "subnet-065833abeab02259e",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          },
+          {
+            "subnetId": "subnet-01956f7e66058b1fd",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-02c2d49576b1661f3"
+          }
+        ]
+      }
+    ]
+  },
+  "availability-zones:account=981864830773:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "availability-zones:account=136671672801:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "availability-zones:account=112226066898:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "availability-zones:account=839712734073:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "availability-zones:account=772713293594:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ]
+}
