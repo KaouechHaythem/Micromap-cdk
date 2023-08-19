@@ -16,27 +16,18 @@ class MicromapEKSStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-         # Create an IAM Role to be assumed by admins
-        masters_role = iam.Role(
-            self,
-            'EksMastersRole',
-            assumed_by=iam.AccountRootPrincipal()
-        )
-        # Attach an IAM Policy to that Role so users can access the Cluster
-        masters_role_policy = iam.PolicyStatement(
-            actions=['eks:DescribeCluster'],
-            resources=['*'],  # Adjust the resource ARN if needed
-        )
-        masters_role.add_to_policy(masters_role_policy)
+       
         cluster=eks.Cluster(
         self, 
-        "testEnv",
+        "MICROMAP",
         version=eks.KubernetesVersion.V1_27,
+        default_capacity=2,
+        default_capacity_instance=ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO)
   )
-        cluster.aws_auth.add_masters_role(masters_role)
-        
+        user_arn = os.environ.get('USER_ARN')
+
         # Add the user to the cluster's admins
-        admin_user = iam.User.from_user_arn(self, "AdminUser", user_arn="arn:aws:iam::772713293594:user/cloud_user")
+        admin_user = iam.User.from_user_arn(self, "AdminUser", user_arn=user_arn)
         cluster.aws_auth.add_user_mapping(admin_user, groups=["system:masters"])
 
      
